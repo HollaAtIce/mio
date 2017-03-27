@@ -1,0 +1,22 @@
+{
+  "name": "mio",
+  "description": "isaac website",
+  "main": "server.js",
+  "authors": [
+    "IC"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/HollaAtIce/mio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7"
+  }
+}
