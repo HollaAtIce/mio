@@ -35,7 +35,7 @@ var destinations = {
     js: 'public/build'
 }
 // concats angular files
-gulp.task('js', function () {
+gulp.task('js', function() {
     return es.merge(gulp.src(source.js.src))
         .pipe(babel({
             presets: ['es2015']
@@ -46,7 +46,7 @@ gulp.task('js', function () {
         .pipe(gulp.dest(destinations.js))
 })
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     gulp.watch(source.js.src, ['js'])
 })
 
@@ -55,9 +55,9 @@ gulp.task('vendor', buildVendor)
 
 function buildVendor() {
     let tasks = []
-    _.forIn(scripts.chunks, function (chunkScripts, chunkName) {
+    _.forIn(scripts.chunks, function(chunkScripts, chunkName) {
         var paths = []
-        chunkScripts.forEach(function (script) {
+        chunkScripts.forEach(function(script) {
             var scriptFileName = scripts.paths[script]
             var scriptPath = path.join(__dirname, scriptFileName)
             if (!fs.existsSync(scriptPath)) {
@@ -118,7 +118,7 @@ function buildProdPackage() {
         .pipe(gulp.dest(options.packagePath))
 }
 
-var swallowError = function (error) {
+var swallowError = function(error) {
     console.log(error.toString())
     this.emit('end')
 }

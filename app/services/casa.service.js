@@ -14,6 +14,6 @@ function casaService(options) {
     }
 
     function getAll() {
-        return Hacker.find()
+        return Casa.find()
     }
 }
