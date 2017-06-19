@@ -4,10 +4,13 @@ const router = express.Router()
 const casaRoutes = require('./casa.routes')
 const usersRoutes = require('./users.routes')
 const sitesRoutes = require('./sites.routes')
+const aboutRoutes = require('./about.routes')
 
+// register routes ///////
 router.use('/api/casa', casaRoutes)
 router.use('/api/users', usersRoutes)
 router.use('/api/sites', sitesRoutes)
+router.use('/api/about', aboutRoutes)
 
 router.use('/api/*', function(req, res, next) {
     res.sendStatus(404)

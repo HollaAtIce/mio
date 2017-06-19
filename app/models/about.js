@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const casaSchema = new Schema({
+const aboutSchema = new Schema({
     name: {
         type: String,
         required: false
@@ -10,4 +10,4 @@ const casaSchema = new Schema({
 
 // define our casa model
 // module.exports allows us to pass this to other files when it is called
-module.exports = mongoose.model('Casa', casaSchema)
+module.exports = mongoose.model('About', aboutSchema)
