@@ -3,39 +3,29 @@
 angular.module('app', ['ui.router'])
         .config(RouteConfig)
 
-RouteConfig.$inject = ['$stateProvider']
+RouteConfig.$inject = ['$stateProvider', '$locationProvider']
 
 // STATES
 
-function RouteConfig($stateProvider) {
+function RouteConfig($stateProvider, $locationProvider) {
     $stateProvider
             .state('about', {
                 url: '/isaac',
                 templateUrl: 'public/modules/home/views/about.html',
                 controller: 'HomeController as $ctrl'
-                // views: {
-                //     'root@app': {
-                //         templateUrl: 'public/modules/home/views/casa.html',
-                //         controller: 'HomeController as HomeCtrl'
-                //     }
-                // }
 
             })
             .state('thedime', {
                 url: '/thedime',
                 templateUrl: 'public/modules/home/views/thedime.html',
                 controller: 'HomeController as $ctrl'
-                // views: {
-                //     'root@app': {
-                //         templateUrl: 'public/modules/home/views/about.html',
-                //         controller: 'HomeController as HomeCtrl'
-                //     }
-                // }
 
             })
             .state('home', {
                 url: '/'
             })
+
+    $locationProvider.html5Mode(true)
 }
 
 // CTRL
