@@ -37,7 +37,7 @@ HomeController.$inject = ['HomeService']
 
 function HomeController(HomeService) {
     var vm = this
-    vm.tagline = 'Isaac Cuchilla'
+    vm.name = 'Isaac Cuchilla'
 
     function onError(err) {
         console.log(err)
