@@ -24,6 +24,16 @@ function RouteConfig($stateProvider, $locationProvider) {
             .state('home', {
                 url: '/'
             })
+            .state('projects', {
+                url: '/projects',
+                templateUrl: 'public/modules/home/views/projects.html',
+                controller: 'HomeController as $ctrl'
+            })
+            .state('thedimevideo', {
+                url: '/thedimevideo',
+                templateUrl: 'public/modules/home/views/thedimevideo.html',
+                controller: 'HomeController as $ctrl'
+            })
 
     $locationProvider.html5Mode(true)
 }
